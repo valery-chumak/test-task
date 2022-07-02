@@ -13,8 +13,8 @@ function createBoxes(amount) {
   for (let i = 1; i <= amount; i++){
     const div = document.createElement("div");
     div.style.backgroundColor = getRandomHexColor();
-    div.style.width = (30 * counter) + "px";
-    div.style.height = (30 * counter) + "px";
+    div.style.width = (30 + counter * 10 ) + "px";
+    div.style.height = (30 + counter * 10) + "px";
     div.classList.add("color-box");
     boxes.append(div); 
     counter++;
