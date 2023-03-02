@@ -1,36 +1,92 @@
 * {
   box-sizing: border-box;
 }
-
+:root {
+  --btn-focus: #5cd3a8;
+  --primary-clr: #ebd8ff;
+  --card-bg: #5736a3;
+}
 body {
-  margin: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
-  color: #212121;
-  line-height: 1.5;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--primary-clr);
+  text-transform: uppercase;
 }
-
-input {
-  padding: 8px;
-  font: inherit;
-}
-
-button {
-  padding: 8px 12px;
-  cursor: pointer;
-}
-.gallery{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0;
+p {
   margin: 0;
-  list-style: none;
 }
-.image{
+.card {
+  position: relative;
+  width: 380px;
+  height: 460px;
+
+  background: linear-gradient(
+    114.99deg,
+    #471ca9 -0.99%,
+    #5736a3 54.28%,
+    #4b2a99 78.99%
+  );
+  box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
+  border-radius: 20px;
+}
+/* .card-top {
+  background: url(../images/message.png);
+  background-repeat: no-repeat;
+  background-size: 308px 168px;
+  background-position: 28px;
+} */
+
+.logo {
+  width: 76px;
+  height: 22px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.msg-container {
+  text-align: center;
+}
+.msg-img {
+  width: 308px;
+  height: 168px;
+  margin: 0 auto;
+}
+.avatar-container {
+  width: 380px;
+  height: 8px;
+  background: url(../images/rectangle.png);
+  background-repeat: no-repeat;
+  background-size: 380px 8px;
+}
+.avatar {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 80px;
+  height: 80px;
+}
+.card-bottom {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 36px;
+}
+.btn {
+  width: 196px;
+  height: 50px;
+  cursor: pointer;
+  background: var(--primary-clr);
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  border-radius: 10.3108px;
+}
+.tweets {
+  margin-bottom: 16px;
+}
+.followers {
+  margin-bottom: 26px;
+}
+.image {
   display: block;
   width: 350px;
   height: 200px;
