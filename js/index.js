@@ -1,17 +1,26 @@
-let counterValue = 0;
-const spanValue = document.querySelector("#value");
- 
-const decrementButton = document.querySelector('[data-action = "decrement"]');
-const incrementButton = document.querySelector('[data-action = "increment"]');
+let counterGlobal = 0;
+let following = false;
 
-decrementButton.addEventListener("click", onDecrementButtonClick);
-incrementButton.addEventListener("click", onIncrementButtonClick);
+let counterValue = document.querySelector("#followers_value").textContent;
+const spanValue = document.querySelector("#followers_value");
+const followButton = document.querySelector('[data-action = "follow"]');
 
-function onDecrementButtonClick() {
-    counterValue -= 1;
-    spanValue.textContent = counterValue;
-};
-function onIncrementButtonClick() {
+followButton.addEventListener("click", onFollowButtonClick);
+
+counterValue = parseFloat(counterValue.replace(/,/g, ""));
+
+function onFollowButtonClick() {
+  if (!following) {
+    following = true;
+    followButton.textContent = "FOLLOWING";
+    followButton.style.backgroundColor = "#5cd3a8";
     counterValue += 1;
-    spanValue.textContent = counterValue;
-};
+  } else {
+    following = false;
+    followButton.textContent = "FOLLOW";
+    followButton.style.backgroundColor = "#ebd8ff";
+    counterValue -= 1;
+  }
+
+  spanValue.textContent = counterValue.toLocaleString("en-US");
+}
